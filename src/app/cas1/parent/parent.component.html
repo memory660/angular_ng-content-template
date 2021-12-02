@@ -1,0 +1,23 @@
+<app-error-card></app-error-card>
+
+<hr />
+
+<app-error-card [text]="'coucou'">
+  <div class="t-error">Another error text</div>
+  <div class="t-link">
+    <a href="google.com">Google it</a>
+  </div>
+</app-error-card>
+
+<hr />
+
+<app-error-card [template]="googleItTemplate"></app-error-card>
+
+<ng-template #googleItTemplate>
+  <div class="t-input">template Input()</div>
+  <div>
+    <a href="google.com">Google it</a>
+  </div>
+</ng-template>
+
+<hr />

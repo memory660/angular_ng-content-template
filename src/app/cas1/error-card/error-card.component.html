@@ -1,0 +1,17 @@
+ng-content =
+<ng-content></ng-content>
+
+<h3>(1)</h3>
+<div *ngIf="text; else errorTemplate">text = {{ text }}</div>
+
+<ng-template #errorTemplate>
+  errorTemplate = An unexpected error occurred.
+</ng-template>
+
+<h3>(2)</h3>
+<div [ngTemplateOutlet]="defaultTemplate"></div>
+
+<ng-template #defaultTemplate> defaultTemplate. </ng-template>
+
+<h3>(3)</h3>
+<ng-container [ngTemplateOutlet]="template || defaultTemplate"></ng-container>
